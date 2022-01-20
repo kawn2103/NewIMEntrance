@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF9DC"
+    tools:context=".presentation.loginPage.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginBackgroundLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/login_page_white_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.9"
+        app:layout_constraintWidth_percent="0.9">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalHalfGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <ImageView
+            android:id="@+id/loginBackgroundImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/verticalHalfGuideline"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/verticalHalfGuideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontalGuideLine1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.13"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/horizontalGuideLine2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <ImageView
+                android:id="@+id/loginLogoImageView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@color/purple_200"
+                app:layout_constraintTop_toTopOf="@id/horizontalGuideLine1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.11"
+                app:layout_constraintWidth_percent="0.5"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/login_textView_text"
+                android:gravity="center"
+                style="@style/LoginTextViewTextStyle"
+                app:layout_constraintTop_toBottomOf="@id/loginLogoImageView"
+                app:layout_constraintStart_toStartOf="@id/loginLogoImageView"
+                app:layout_constraintEnd_toEndOf="@id/loginLogoImageView"
+                app:layout_constraintBottom_toTopOf="@id/idEditText"/>
+
+            <EditText
+                android:id="@+id/idEditText"
+                style="@style/LoginEditTextTextStyle"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/id_pw_input_background"
+                android:inputType="text"
+                android:singleLine="true"
+                android:hint="@string/login_id_editText_text"
+                app:layout_constraintBottom_toTopOf="@id/horizontalGuideLine2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.11"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.65" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/id_pw_input_background"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                style="@style/LoginEditTextTextStyle"
+                android:hint="@string/login_pw_editText_text"
+                app:layout_constraintTop_toTopOf="@id/horizontalGuideLine2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/loginButton"
+                app:layout_constraintHeight_percent="0.11"
+                app:layout_constraintWidth_percent="0.65"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginButton"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="25dp"
+                style="@style/LoginButtonTextStyle"
+                android:text="@string/login_button_text"
+                android:background="@drawable/login_button_green_background"
+                app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.11"
+                app:layout_constraintWidth_percent="0.65"/>
+
+            <TextView
+                android:id="@+id/errorMessageTextView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                style="@style/ErrorTextViewTextStyle"
+                tools:text="aaaaaaaa"
+                app:layout_constraintTop_toBottomOf="@id/loginButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/disableView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90707070">
+        <ProgressBar
+            android:id="@+id/progressCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/messageTextView"/>
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            style="@style/LoadingTextViewTextStyle"
+            app:layout_constraintTop_toBottomOf="@id/progressCircle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

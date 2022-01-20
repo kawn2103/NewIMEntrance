@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/attendance_history">
+
+    <fragment
+        android:id="@+id/attendance_history"
+        android:name="kst.app.newimentrance.presentation.home.attendanceHistory.AttendanceHistoryFragment"
+        android:label=""
+        tools:layout="@layout/fragment_attendance_history">
+
+        <action
+            android:id="@+id/to_heat_sensing_history"
+            app:destination="@id/heat_sensing_history" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/heat_sensing_history"
+        android:name="kst.app.newimentrance.presentation.home.heatSensingHistory.HeatSensingHistoryFragment"
+        android:label=""
+        tools:layout="@layout/fragment_heat_sensing_history">
+
+    </fragment>
+</navigation>

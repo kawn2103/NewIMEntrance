@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="LoginTextViewTextStyle">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">25sp</item>
+        <item name="android:textColor"> @color/login_editText_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LoginEditTextTextStyle">
+        <item name="android:textSize">25sp</item>
+        <item name="android:paddingStart">40dp</item>
+        <item name="android:paddingEnd">40dp</item>
+        <item name="android:textColor"> @color/login_editText_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="LoginButtonTextStyle">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">25sp</item>
+        <item name="android:textColor"> @color/login_button_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ErrorTextViewTextStyle">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">25sp</item>
+        <item name="android:textColor"> @color/login_errorText_text_color</item>
+    </style>
+
+    <style name="LoadingTextViewTextStyle">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">25sp</item>
+        <item name="android:textColor"> @color/loading_TextView_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HomeViewButtonTextStyle">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">17sp</item>
+        <item name="android:textColor"> @color/home_view_button_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HomeViewTitleTextStyle">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">30sp</item>
+        <item name="android:textColor"> @color/home_view_title_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HomeViewNfcTextStyle">
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMaxTextSize">20sp</item>
+        <item name="android:textColor"> @color/home_view_nfc_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>
